@@ -1,0 +1,11 @@
+artifacts/*
+dataset/*
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+artifacts/
+dataset/
+answer.csv
+

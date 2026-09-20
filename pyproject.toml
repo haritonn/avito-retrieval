@@ -1,0 +1,29 @@
+[project]
+name = "avito-retrieval"
+version = "0.1.0"
+description = "Воспроизводимый notebook-first BM25 + E5 retrieval baseline для Avito"
+readme = "README.md"
+authors = [
+    { name = "Hariton", email = "163732857+haritonn@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "bm25>=0.3.11",
+    "faiss-cpu>=1.15.1",
+    "jupyter>=1.1.1",
+    "numpy>=2.2.6",
+    "polars>=1.44.2",
+    "sentence-transformers",
+    "torch==2.14.0",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
